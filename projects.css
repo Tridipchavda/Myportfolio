@@ -1,0 +1,107 @@
+
+.Project{
+    width: 65vw;
+    height: 42vw;
+    border-radius: 10px;
+    box-shadow:#c9dfff 0px 8px 4px;
+    
+    margin-right: 8vh;
+    margin-bottom: 5vw;
+    overflow: hidden;
+}
+
+
+.pinfo .final{
+    position: relative;
+    top: -26%;
+    text-align: justify;
+    font-size: 18px;
+}
+.combine{
+    display: flex;
+    flex-direction: column;
+}
+.combine .description{
+    width: 45vw;
+    font-size: 2.1vh;
+}
+.Project .Cover{
+    overflow: hidden;
+
+}
+.Project img{
+    border-radius: 20px 21px 0px 0px;
+    width: 101%;
+    height: 32vw;
+    margin-top: 10px;
+    
+}
+.all .headAll{
+    font-size: 60px;
+    color: #0093E9;
+    margin-top: -50px;
+    margin-left: -100px;
+    margin-bottom: 20px;
+    
+}
+.Project img:hover{
+    background-color: cyan;
+    opacity: 0.5;
+    transform: scale(1.1);
+    transition: 1s;
+    
+}
+.combine button{
+    width: 120px;
+    height: 35px;
+    margin: -7vh 81%;
+    padding: 5px;
+    border: 2px solid #80D0C6;
+    color: aliceblue;
+    background-color:#0093E9;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.pinfo button{
+    width: 120px;
+    height: 35px;
+    padding: 5px;
+    border: 2px solid #80D0C6;
+    color: #0093E9;
+    background-color:aliceblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    position: relative;
+    margin: -8vh 81%;
+}
+.pinfo button:hover{
+    transition: 0.5s ease-in;
+    color: aliceblue;
+    background-color:#0093E9;
+}
+.combine button:hover{
+    transition: 0.5s ease-in;
+    background-color: aliceblue;
+    color:#0093E9;
+}
+.pinfo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15vh;
+    background: linear-gradient(#3b89ee, #32d0ec);
+    height: 70vh;
+    justify-content: center;
+    color: whitesmoke;
+    text-align: center;
+}
+.allProjects{
+    margin-left: 20vh;
+    margin-top: -5vh;
+    display: flex;
+    flex-wrap: wrap;
+}

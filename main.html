@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Tridip Chavda </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" href="Assets/logo_loader.png" type="image/icon type">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+</head>
+<body class="body">
+    <div class="loader">
+        <img class='logo' src='Assets/logo_loader.png' width="120px" height="80px">
+        <div class="center">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+          </div>
+    </div>
+    <div class='all' id='loadAll'>
+        <div class='navbar' style="position: fixed;">
+            
+            <nav>
+            <ul>
+                <li><a href='main.html'>Home</a></li>
+                <li><a href='about.html'>About Me</a></li>
+                <li><a href='projects.html'>Projects</a></li>
+                <li><a href='contact.html'>Contact Me</a></li>    
+            </ul>
+            </nav>
+        </div>
+        <div class='main' >
+            <div class='help'>
+                <img class='nav' src='Assets/menu_n.png' height="40px" width="40px">
+                <img class='cross' src='Assets/cross.png' height="25px" width="25px"> 
+            </div>
+            <div class="infocontainer" style="margin-left: 23%;">
+                
+                <div class="effect">
+                    <div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div>
+                    
+                </div>
+                <div class="info">
+                    <h1>Hello.. I am </h1>
+                    <p id='name'>Tridip chavda</p>
+                    <p class='type'>Developer, Competitive Programmer, Designer</p>
+                    <p class='basics'>I am studing computer engineering from Vishwakarma Goverment Engineering college .
+                                      I have learned languages like C++, Java ,Python ,Javascript.
+                                      I am also a competitive programmer available at codechef & hackerRank
+                                      and have knowledge of database,data structures , operating system .</p>
+                    <div class="buttons">
+                        <a href='resume.pdf' target="_blank">
+                            <button>Download cv</button>
+                        </a>
+                        <a href="contact.html">
+                            <button>Contact Me</button>
+                        </a>
+                    </div>
+                </div>
+            <div class="social">
+                <div class='me'><img alt="Tridip chavda"src="Assets/im.png"></div>
+                <div class='socialMedia'>
+                    <a href="mailto: chavdatridip007@gmail.com"><img src='Assets/envelope.png' width="34vh" height="34vh"></a>
+                    <a href="https://github.com/tridipchavda"><img src='Assets/github.png' width="34vh" height="34vh"></a>
+                    <a href="https://www.instagram.com/tridip_chavda"><img src='Assets/instagram.png' width="34vh" height="34vh"></a>
+                    <a href="https://www.linkedin.com/in/tridip-chavda-b4b091216"><img src='Assets/linkedin.png' width="34vh" height="34vh"></a>
+                </div>
+            </div>
+            </div>
+            
+            
+         
+        </div>
+    </div>
+    <script>
+
+        setTimeout(function(){
+
+            // $('.loader').fadeOut(1000);
+            document.querySelector('.loader').style.display='none';
+            document.querySelector('#loadAll').style.display='flex';
+            document.querySelector('.body').style.background='white';
+            document.querySelector('.body').style.justifyContent='unset';
+            document.querySelector('.body').style.alignContent='unset';
+            document.querySelector('.body').style.overflow='unset';
+            document.querySelector('.body').style.minHeight='unset';
+            // $('.body').fadeIn(1000);
+        },3500)
+
+        
+
+        if(window.innerWidth<700){
+            document.querySelector('.infocontainer').style.margin='90px 10px 90px 20px';
+        }
+        document.querySelector('.cross').style.display='none';
+
+        document.querySelector('.help').addEventListener("click",()=>{
+            if(window.innerWidth>1100){
+                document.querySelector('.navbar').classList.toggle('navbarNext');
+                
+                if(document.querySelector('.navbar').classList.contains('navbarNext')){
+                  
+                    document.querySelector('.infocontainer').style.transform='translate(-12vw,0)';
+                    document.querySelector('.infocontainer').style.transition='transform 0.7s ease-in';
+                    document.querySelector('.nav').style.display='inline';
+                    document.querySelector('.cross').style.display='none';
+                    
+                    document.querySelector('.nav').style.opacity='1';
+                    
+                }
+                else{
+                    document.querySelector('.cross').style.display='inline';
+                    document.querySelector('.nav').style.opacity='0';
+                    document.querySelector('.nav').style.position='absolute';
+                    document.querySelector('.infocontainer').style.transform='translate(0vw,0)';
+                    document.querySelector('.infocontainer').style.transition='transform 0.7s ease-in';
+                }
+            }
+            else{
+                document.querySelector('.navbar').classList.toggle('navbarNext');
+                if(document.querySelector('.navbar').classList.contains('navbarNext')){
+                    
+                    document.querySelector('.cross').style.display='inline';
+                    document.querySelector('.nav').style.opacity='0';
+                    document.querySelector('.nav').style.position='absolute';
+                    document.querySelector('.infocontainer').style.transition='transform 0.7s ease-in';
+                }
+                else{
+                    
+
+                    document.querySelector('.nav').style.display='inline';
+                    document.querySelector('.cross').style.display='none';
+                    
+                    document.querySelector('.infocontainer').style.transition='transform 0.7s ease-in';
+                    document.querySelector('.nav').style.opacity='1';
+                }
+            
+            }
+            
+        })
+        
+    </script>
+</body>
+</html>

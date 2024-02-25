@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Tridip Chavda </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class='all'>
+        <div class='navbar'>
+            
+            <nav>
+                <ul>
+                    <li><a href='main.html'>Home</a></li>
+                    <li><a href='about.html'>About Me</a></li>
+                    <li><a href='projects.html'>Projects</a></li>
+                    <li><a href='contact.html'>Contact Me</a></li>    
+                </ul>
+            </nav>
+        </div>
+        <div class='main'>
+            <div class='help'>
+                <img class='nav' src='Assets/menu_n.png' height="40px" width="40px">
+                <img class='cross' src='Assets/cross.png' height="25px" width="25px"> 
+            </div>
+            <div class="infocontainer">
+                <div class="effect">
+                    <div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div>
+                </div>
+                
+                <div class="query">
+                <center><span> Let's Talk</span></center>
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="Name" >Name</label>
+                        </br>
+                        <input type="text" name="name" class="form-control" placeholder="  Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        </br>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="  Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" >Phone</label>
+                        </br>
+                        <input type="text" name="phone" class="form-control" placeholder="  Phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Subject</label>
+                        </br>
+                        <input type="text" name="subject" class="form-control" id="exampleInputPassword1" placeholder="  Subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Description</label>
+                        </br>
+                        <textarea type="text" name="description"class="form-control" placeholder=" Enter Description"></textarea>
+                    </div>
+                    
+                    <button type="submit" target="contact.html"class="btn btn-primary">Submit</button>
+                </form>
+                </div>
+        </div>
+    </div>
+    <script>
+        if(window.innerWidth<1100){
+            document.querySelector('.navbar').style.transform= 'translate(-250px,0)';
+        }
+        document.querySelector('.cross').style.display='none';
+        document.querySelector('.help').addEventListener("click",()=>{
+            if(window.innerWidth>1100){
+                document.querySelector('.navbar').classList.toggle('navbarNext');
+                
+                if(document.querySelector('.navbar').classList.contains('navbarNext')){
+                    document.querySelector('.nav').style.display='inline';
+                    document.querySelector('.cross').style.display='none';
+                
+                    document.querySelector('.nav').style.opacity='1';
+                    document.querySelector('.query').style.margin='-10vh 5vw 0 0';
+                }
+                else{
+                    document.querySelector('.cross').style.display='inline';
+                    document.querySelector('.cross').style.margin='0 13vw';
+                    document.querySelector('.nav').style.opacity='0';
+                    document.querySelector('.nav').style.position='absolute';
+                    document.querySelector('.query').style.margin='-10vh 20vw 0 0';
+                }
+            }
+            else{
+                document.querySelector('.navbar').classList.toggle('navbarNext');
+                if(document.querySelector('.navbar').classList.contains('navbarNext')){
+                    document.querySelector('.navbar').style.transform= 'translate(0px,0)';
+                    document.querySelector('.cross').style.display='inline';
+                    document.querySelector('.nav').style.opacity='0';
+                    document.querySelector('.nav').style.position='absolute';
+                    document.querySelector('.navbar').style.visibility='unset';
+                }
+                else{
+                    document.querySelector('.navbar').style.transform= 'translate(-250px,0)';
+                    document.querySelector('.nav').style.display='inline';
+                    document.querySelector('.cross').style.display='none';
+                    document.querySelector('.navbar').style.visibility='hidden';
+                    document.querySelector('.navbar').style.transition='1s';
+                    document.querySelector('.cross').style.transition='1s';
+                    document.querySelector('.nav').style.opacity='1';
+                    document.querySelector('.query').style.margin='-10% 17% 0% 0%';
+                }
+            
+            }
+            
+        })
+        
+    </script>
+</body>
